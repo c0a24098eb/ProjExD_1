@@ -21,7 +21,7 @@ def main():
         screen.blit(kk_img, [300, 200]) #練習4
         pg.display.update()
         tmr += 1        
-        clock.tick()
+        clock.tick(200)
 
 
 if __name__ == "__main__":
