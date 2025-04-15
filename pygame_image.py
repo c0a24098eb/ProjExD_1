@@ -28,6 +28,8 @@ def main():
             kk_rct.move_ip(-1, 0)  
         if key_lst[pg.K_RIGHT]:
             kk_rct.move_ip(+1, 0)  # 練習１０－４
+        else:
+            kk_rct.move_ip(-1, 0)
 
 
         x = tmr
