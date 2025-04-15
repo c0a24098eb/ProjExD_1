@@ -20,16 +20,21 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
         key_lst = pg.key.get_pressed()
+        
+
+        #こうかとん移動（演習２）
+        move = ()
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip(0, -1)  
-        if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip(0, +1)  
-        if key_lst[pg.K_LEFT]:
-            kk_rct.move_ip(-1, 0)  
-        if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip(+1, 0)  # 練習１０－４
+            move = (-1, -1)  
+        elif key_lst[pg.K_DOWN]:
+            move = (-1, +1)  
+        elif key_lst[pg.K_LEFT]:
+            move = (-2, 0)
+        elif key_lst[pg.K_RIGHT]:
+            move = (+1, 0)  # 練習１０－４
         else:
-            kk_rct.move_ip(-1, 0)
+            move = (-1, 0)  #演習１
+        kk_rct.move_ip(move)
 
 
         x = tmr
